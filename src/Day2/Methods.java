@@ -12,3 +12,19 @@ public class Methods {
 
     }
 }
+
+
+
+// this is traditional way , the above one is lazy yeah but i prefer that
+// another type
+//class demo{
+//void prd(){
+//System.out.print("");
+// }
+// }
+
+//public static void main(String args[])
+// {
+//demo obj = new demo();
+//obj.prd();
+//}
