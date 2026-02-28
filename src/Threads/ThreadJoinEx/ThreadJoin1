@@ -1,0 +1,22 @@
+package Threads.ThreadJoinEx;
+
+class MyThread extends Thread{
+    public void run(){
+        for (int i=0;i<5;i++){
+            System.out.println("Child : "+i);
+        }
+    }
+}
+
+public class Demo {
+    static void main(String[] args) throws Exception {
+        MyThread t1 = new MyThread();
+        t1.start();
+//        try{
+//            t1.join();
+//        }catch (Exception e){}  try join if not then do this without putting throw in main
+        t1.join();
+            System.out.println("Main thread!");
+        }
+    }
+
