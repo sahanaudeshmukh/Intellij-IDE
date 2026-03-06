@@ -1,0 +1,28 @@
+package Array.Basics;
+
+public class prefixsum {
+    static void main(String[] args) {
+        int[] arr = {2, 3, 4, 5, 6};
+        int[] prefix = new int[arr.length];
+        prefix[0] = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            prefix[i] = prefix[i - 1] + arr[i];
+        }
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(prefix[i] + " ");
+        }
+
+
+//------------Prefix Sum Over---------//
+        int L = 0;
+        int R = 3;
+        int sum;
+        if (L == 0) {
+            sum = prefix[R];
+        } else {
+            sum = prefix[R] - prefix[L - 1];
+        }
+        System.out.println("Sum of range between index 1 to 3 :" +sum);
+    }
+}
+

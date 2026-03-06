@@ -1,0 +1,17 @@
+package Threads.lambdafunction.withRunnableInterface.NewWay;
+
+public class demo {
+    static void main(String[] args) {
+        Thread t1= new Thread(()-> System.out.println("MyTask1 is running"));
+        Thread t2= new Thread(()->{
+            for ( int i=0;i<10;i++){
+                System.out.println("MyTask2 is running : "+ i);
+            }
+
+
+        });
+        t1.start();
+        t2.start();
+
+    }
+}
